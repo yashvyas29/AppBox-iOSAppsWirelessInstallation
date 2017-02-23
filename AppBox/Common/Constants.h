@@ -11,7 +11,7 @@
 
 //Base URL's
 #define abMailerBaseURL @"https://appboxapi.github.io/mail"
-#define abInstallWebAppBaseURL @"https://tryapp.github.io"
+#define abInstallWebAppBaseURL @"https://yashvyas29.github.io"
 #define abGitHubReleaseBaseURL @"https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/releases/tag/"
 
 //Other URL's

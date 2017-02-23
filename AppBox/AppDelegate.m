@@ -22,7 +22,7 @@
     self.sessionLog = [[NSMutableString alloc] init];
     
     //Check Dropbox Keys
-    [Common checkDropboxKeys];
+    //[Common checkDropboxKeys];
     
     
     //Init Crashlytics
