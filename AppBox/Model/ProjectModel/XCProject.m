@@ -61,12 +61,12 @@
 }
 
 //Create export options plist for archive and upload
-- (void)createExportOptionPlist{
+- (BOOL)createExportOptionPlist{
     [self createBuildRelatedPathsAndIsNew:YES];
     NSMutableDictionary *exportOption = [[NSMutableDictionary alloc] init];
     [exportOption setValue:self.teamId forKey:@"teamID"];
     [exportOption setValue:self.buildType forKey:@"method"];
-    [exportOption writeToFile:self.exportOptionsPlistPath.resourceSpecifier atomically:YES];
+    return [exportOption writeToFile:[self.exportOptionsPlistPath.resourceSpecifier stringByRemovingPercentEncoding] atomically:YES];
 }
 
 //Create all path required during archive and upload
@@ -87,8 +87,8 @@
         _buildArchivePath =  [NSURL URLWithString:archivePath];
         
         //IPA Path
-        NSString *ipaPath = [_buildUUIDDirectory.resourceSpecifier stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.ipa", self.name]];
-        _ipaFullPath = [NSURL URLWithString:ipaPath];
+        NSString *ipaPath = [_buildUUIDDirectory.resourceSpecifier stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.ipa", self.selectedSchemes]];
+        _ipaFullPath = [NSURL URLWithString:[ipaPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         
         //Export Option Plist
         NSString *exportOptionPlistPath = [_buildUUIDDirectory.resourceSpecifier stringByAppendingPathComponent:[NSString stringWithFormat:@"%@-ExportOptions.plist", self.name]];

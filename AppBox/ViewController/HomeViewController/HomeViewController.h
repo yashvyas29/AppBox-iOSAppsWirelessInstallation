@@ -8,12 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ALOutputParser.h"
+#import "MobileProvision.h"
+#import "CIViewController.h"
 #import "MailViewController.h"
 #import "DropboxViewController.h"
 #import "ShowLinkViewController.h"
 #import "ProjectAdvancedViewController.h"
 
-@interface HomeViewController : NSViewController <MailDelegate, NSTabViewDelegate>{
+@interface HomeViewController : NSViewController <NSTabViewDelegate, MailDelegate, ProjectAdvancedViewDelegate>{
     //Tab
     IBOutlet NSTabView *tabView;
     
@@ -24,6 +26,7 @@
     IBOutlet NSComboBox *comboBuildType;
     IBOutlet NSButton *buttonAction;
     IBOutlet NSButton *buttonAdcanced;
+    IBOutlet NSButton *buttonConfigCI;
     
     //Upload IPA
     IBOutlet NSPathControl *pathIPAFile;
@@ -46,6 +49,7 @@
 - (IBAction)projectPathHandler:(NSPathControl *)sender;
 - (IBAction)ipaFilePathHandle:(NSPathControl *)sender;
 - (IBAction)buttonUniqueLinkTapped:(NSButton *)sender;
+- (IBAction)buttonConfigCITapped:(NSButton *)sender;
 
 - (IBAction)comboBuildSchemeValueChanged:(NSComboBox *)sender;
 - (IBAction)comboTeamIdValueChanged:(NSComboBox *)sender;
