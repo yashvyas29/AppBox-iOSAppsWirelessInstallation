@@ -9,15 +9,20 @@
 /* Begin PBXBuildFile section */
 		84A31BD8650851B3675A1797 /* libPods-AppBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD2CC287A9B5D93F4C72A0D /* libPods-AppBox.a */; };
 		9740CD411E005DB100224D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9740CD3F1E005DB100224D9F /* Main.storyboard */; };
+		DB45B45B1F6EC5EE0041EB42 /* PythonServer.sh in Resources */ = {isa = PBXBuildFile; fileRef = DB3D7CC81F64501F00217096 /* PythonServer.sh */; };
+		DB45B45C1F6EC5F10041EB42 /* SwitchXcode.sh in Resources */ = {isa = PBXBuildFile; fileRef = DB45B4591F6EC3B80041EB42 /* SwitchXcode.sh */; };
+		DBFC680D1F6AE957007A4ED2 /* EventTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC680C1F6AE957007A4ED2 /* EventTracker.m */; };
 		E10B821E1DF043EA00BBE0CD /* GetSchemeScript.sh in Resources */ = {isa = PBXBuildFile; fileRef = E172E13B1DEEB3B900405EF2 /* GetSchemeScript.sh */; };
 		E10B82221DF0498800BBE0CD /* TeamIDScript.sh in Resources */ = {isa = PBXBuildFile; fileRef = E10B82211DF0498600BBE0CD /* TeamIDScript.sh */; };
+		E11633991E558635005EAB31 /* MobileProvision.m in Sources */ = {isa = PBXBuildFile; fileRef = E11633981E558635005EAB31 /* MobileProvision.m */; };
 		E119EF601E373C9B00A7798E /* ALAppStore.sh in Resources */ = {isa = PBXBuildFile; fileRef = E191F7C21E1E7B2A00D2A590 /* ALAppStore.sh */; };
-		E119EF641E3763A000A7798E /* ALOutputParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E119EF631E3763A000A7798E /* ALOutputParser.m */; };
-		E119EF671E3764C600A7798E /* ALOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E119EF661E3764C600A7798E /* ALOutput.m */; };
 		E12E6D0A1D8FC77D0054814D /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E12E6D081D8FC77D0054814D /* DashboardViewController.m */; };
+		E13161F21E9777DF00586052 /* RepoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E13161F11E9777DF00586052 /* RepoBuilder.m */; };
 		E13946121DF2AFCF00B3FAD0 /* XCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = E13946111DF2AFCF00B3FAD0 /* XCProject.m */; };
 		E13946161DF2FBAD00B3FAD0 /* ProjectBuildScript.sh in Resources */ = {isa = PBXBuildFile; fileRef = E13946141DF2FBAD00B3FAD0 /* ProjectBuildScript.sh */; };
 		E143637B1DF59AFD00FB10CA /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E143637A1DF59AFD00FB10CA /* LogViewController.m */; };
+		E14A441F1F277590006A9102 /* XCArchiveResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E14A441E1F277590006A9102 /* XCArchiveResult.m */; };
+		E14A44221F2775A2006A9102 /* XCArchiveParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E14A44211F2775A2006A9102 /* XCArchiveParser.m */; };
 		E14F33341E1A64CA00C3DD34 /* NSApplication+MenuHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F33331E1A64CA00C3DD34 /* NSApplication+MenuHandler.m */; };
 		E15C266A1D7FD5CE004243B9 /* ShowLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C26691D7FD5CE004243B9 /* ShowLinkViewController.m */; };
 		E16018F01DEC0BC200E3A377 /* DropboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16018EF1DEC0BC200E3A377 /* DropboxViewController.m */; };
@@ -32,10 +37,20 @@
 		E16438A21D7469D200CE8B7E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16438A11D7469D200CE8B7E /* CoreData.framework */; };
 		E16438A41D7469D900CE8B7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E16438A31D7469D900CE8B7E /* Foundation.framework */; };
 		E16724601E1D2AE000346502 /* CIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E167245F1E1D2AE000346502 /* CIViewController.m */; };
+		E16D72D71E88F99A0031FB7C /* ALOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D72D41E88F99A0031FB7C /* ALOutput.m */; };
+		E16D72D81E88F99A0031FB7C /* ALOutputParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D72D61E88F99A0031FB7C /* ALOutputParser.m */; };
+		E16D72DC1E88FA230031FB7C /* XCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D72DB1E88FA230031FB7C /* XCHandler.m */; };
+		E16D72E41E88FB660031FB7C /* TaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E16D72E31E88FB660031FB7C /* TaskHandler.m */; };
+		E16D72E51E8912790031FB7C /* XCodePath.sh in Resources */ = {isa = PBXBuildFile; fileRef = E119EF5F1E3735EA00A7798E /* XCodePath.sh */; };
+		E16D72EB1E893DD70031FB7C /* AppBoxIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16D72EA1E893DD70031FB7C /* AppBoxIcons.xcassets */; };
+		E18186CE1E8A3BC00002509F /* PreferencesTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18186CD1E8A3BC00002509F /* PreferencesTabViewController.m */; };
+		E18186D61E8A45C30002509F /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18186D51E8A45C30002509F /* PreferencesViewController.m */; };
+		E18186DC1E8A47C10002509F /* AccountPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18186DB1E8A47C10002509F /* AccountPreferencesViewController.m */; };
+		E18186DF1E8A47CD0002509F /* EmailPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18186DE1E8A47CD0002509F /* EmailPreferencesViewController.m */; };
+		E18186E21E8A47D60002509F /* HelpPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18186E11E8A47D60002509F /* HelpPreferencesViewController.m */; };
 		E188EA101D78485900EBCA52 /* BitlyURLShortenerService.m in Sources */ = {isa = PBXBuildFile; fileRef = E188EA0A1D78485900EBCA52 /* BitlyURLShortenerService.m */; };
 		E188EA111D78485900EBCA52 /* GooglURLShortenerService.m in Sources */ = {isa = PBXBuildFile; fileRef = E188EA0C1D78485900EBCA52 /* GooglURLShortenerService.m */; };
 		E188EA121D78485900EBCA52 /* Tiny.m in Sources */ = {isa = PBXBuildFile; fileRef = E188EA0F1D78485900EBCA52 /* Tiny.m */; };
-		E18DCB171DFE729300BD7F11 /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E18DCB161DFE729300BD7F11 /* MailViewController.m */; };
 		E1902B481E16423200C3E0F6 /* ProjectAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1902B471E16423200C3E0F6 /* ProjectAdvancedViewController.m */; };
 		E1902B531E16617B00C3E0F6 /* NetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E1902B4E1E16617B00C3E0F6 /* NetworkHandler.m */; };
 		E1902B541E16617B00C3E0F6 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1902B521E16617B00C3E0F6 /* UserData.m */; };
@@ -46,7 +61,17 @@
 		E1902B641E16633A00C3E0F6 /* KeychainHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E1902B631E16633A00C3E0F6 /* KeychainHandler.m */; };
 		E1AA0F441E2F328300BA81A1 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA0F431E2F328300BA81A1 /* QRCodeViewController.m */; };
 		E1AA0F481E2F94F700BA81A1 /* WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AA0F471E2F94F700BA81A1 /* WindowController.m */; };
+		E1AE88711F3F15780085B173 /* LocalServerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE88701F3F15780085B173 /* LocalServerHandler.m */; };
+		E1C024711E9B4E6C00C87CC9 /* SlackClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C024701E9B4E6C00C87CC9 /* SlackClient.m */; };
+		E1C024731E9B9DD500C87CC9 /* InstallPrivateKey.sh in Resources */ = {isa = PBXBuildFile; fileRef = E1C024721E9B9DC700C87CC9 /* InstallPrivateKey.sh */; };
 		E1CFC65E1D7E7FEA005872BE /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CFC65D1D7E7FEA005872BE /* Common.m */; };
+		E1D12EE31EC2F17B0065E59A /* SlackPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D12EE11EC2F17B0065E59A /* SlackPreferencesViewController.m */; };
+		E1D12EE41EC2F17B0065E59A /* SlackPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D12EE21EC2F17B0065E59A /* SlackPreferencesViewController.xib */; };
+		E1D12EE61EC2F3E70065E59A /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D12EE51EC2F3E70065E59A /* PreferencesViewController.xib */; };
+		E1D12EE81EC2F4360065E59A /* PreferencesTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D12EE71EC2F4360065E59A /* PreferencesTabViewController.xib */; };
+		E1D12EEA1EC2F5230065E59A /* EmailPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D12EE91EC2F5230065E59A /* EmailPreferencesViewController.xib */; };
+		E1D12EEC1EC31AC80065E59A /* AccountPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D12EEB1EC31AC80065E59A /* AccountPreferencesViewController.xib */; };
+		E1D12EEE1EC320760065E59A /* HelpPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D12EED1EC320760065E59A /* HelpPreferencesViewController.xib */; };
 		E1D479C41E4AE4BC00BBC838 /* GitRepoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D479C31E4AE4BC00BBC838 /* GitRepoDetails.m */; };
 		E1D479D11E4B04A500BBC838 /* Project+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D479C61E4B04A500BBC838 /* Project+CoreDataClass.m */; };
 		E1D479D21E4B04A500BBC838 /* Project+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D479C81E4B04A500BBC838 /* Project+CoreDataProperties.m */; };
@@ -54,6 +79,10 @@
 		E1D479D41E4B04A500BBC838 /* UploadRecord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D479CC1E4B04A500BBC838 /* UploadRecord+CoreDataProperties.m */; };
 		E1D479D51E4B04A500BBC838 /* CISetting+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D479CE1E4B04A500BBC838 /* CISetting+CoreDataClass.m */; };
 		E1D479D61E4B04A500BBC838 /* CISetting+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D479D01E4B04A500BBC838 /* CISetting+CoreDataProperties.m */; };
+		E1DC25FD1ECDBC16001EF106 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DC25FC1ECDBC16001EF106 /* MBProgressHUD.m */; };
+		E1DC26001ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DC25FF1ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.m */; };
+		E1E215B71E869BDF0091565D /* ITCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E215B61E869BDF0091565D /* ITCLoginViewController.m */; };
+		E1E215BB1E869BF70091565D /* ITCLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E215BA1E869BF70091565D /* ITCLogin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,20 +103,28 @@
 		9740CD401E005DB100224D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AppBox/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		ADD2CC287A9B5D93F4C72A0D /* libPods-AppBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6359ECA7EF9D4D3F8BE63F /* Pods-AppBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppBox/Pods-AppBox.debug.xcconfig"; sourceTree = "<group>"; };
+		DB3D7CC81F64501F00217096 /* PythonServer.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = PythonServer.sh; sourceTree = "<group>"; };
+		DB45B4591F6EC3B80041EB42 /* SwitchXcode.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = SwitchXcode.sh; sourceTree = "<group>"; };
+		DBFC680B1F6AE957007A4ED2 /* EventTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTracker.h; sourceTree = "<group>"; };
+		DBFC680C1F6AE957007A4ED2 /* EventTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTracker.m; sourceTree = "<group>"; };
 		E10B82211DF0498600BBE0CD /* TeamIDScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = TeamIDScript.sh; sourceTree = "<group>"; };
+		E11633971E558635005EAB31 /* MobileProvision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileProvision.h; sourceTree = "<group>"; };
+		E11633981E558635005EAB31 /* MobileProvision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileProvision.m; sourceTree = "<group>"; };
 		E119EF5F1E3735EA00A7798E /* XCodePath.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCodePath.sh; sourceTree = "<group>"; };
-		E119EF621E3763A000A7798E /* ALOutputParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOutputParser.h; sourceTree = "<group>"; };
-		E119EF631E3763A000A7798E /* ALOutputParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOutputParser.m; sourceTree = "<group>"; };
-		E119EF651E3764C600A7798E /* ALOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOutput.h; sourceTree = "<group>"; };
-		E119EF661E3764C600A7798E /* ALOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOutput.m; sourceTree = "<group>"; };
 		E12E6D071D8FC77D0054814D /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		E12E6D081D8FC77D0054814D /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		E13161F01E9777DF00586052 /* RepoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoBuilder.h; sourceTree = "<group>"; };
+		E13161F11E9777DF00586052 /* RepoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoBuilder.m; sourceTree = "<group>"; };
 		E13946101DF2AFCF00B3FAD0 /* XCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCProject.h; sourceTree = "<group>"; };
 		E13946111DF2AFCF00B3FAD0 /* XCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCProject.m; sourceTree = "<group>"; };
 		E13946131DF2AFFF00B3FAD0 /* AppBoxPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppBoxPrefixHeader.pch; sourceTree = "<group>"; };
 		E13946141DF2FBAD00B3FAD0 /* ProjectBuildScript.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProjectBuildScript.sh; sourceTree = "<group>"; };
 		E14363791DF59AFD00FB10CA /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogViewController.h; sourceTree = "<group>"; };
 		E143637A1DF59AFD00FB10CA /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogViewController.m; sourceTree = "<group>"; };
+		E14A441D1F277590006A9102 /* XCArchiveResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCArchiveResult.h; sourceTree = "<group>"; };
+		E14A441E1F277590006A9102 /* XCArchiveResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCArchiveResult.m; sourceTree = "<group>"; };
+		E14A44201F2775A2006A9102 /* XCArchiveParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCArchiveParser.h; sourceTree = "<group>"; };
+		E14A44211F2775A2006A9102 /* XCArchiveParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCArchiveParser.m; sourceTree = "<group>"; };
 		E14F33321E1A64CA00C3DD34 /* NSApplication+MenuHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MenuHandler.h"; sourceTree = "<group>"; };
 		E14F33331E1A64CA00C3DD34 /* NSApplication+MenuHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MenuHandler.m"; sourceTree = "<group>"; };
 		E15C26681D7FD5CE004243B9 /* ShowLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLinkViewController.h; sourceTree = "<group>"; };
@@ -111,7 +148,27 @@
 		E16438A31D7469D900CE8B7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E167245E1E1D2AE000346502 /* CIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIViewController.h; sourceTree = "<group>"; };
 		E167245F1E1D2AE000346502 /* CIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIViewController.m; sourceTree = "<group>"; };
+		E16D72D31E88F99A0031FB7C /* ALOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOutput.h; sourceTree = "<group>"; };
+		E16D72D41E88F99A0031FB7C /* ALOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOutput.m; sourceTree = "<group>"; };
+		E16D72D51E88F99A0031FB7C /* ALOutputParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALOutputParser.h; sourceTree = "<group>"; };
+		E16D72D61E88F99A0031FB7C /* ALOutputParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALOutputParser.m; sourceTree = "<group>"; };
+		E16D72DA1E88FA230031FB7C /* XCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCHandler.h; sourceTree = "<group>"; };
+		E16D72DB1E88FA230031FB7C /* XCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCHandler.m; sourceTree = "<group>"; };
+		E16D72E21E88FB660031FB7C /* TaskHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskHandler.h; sourceTree = "<group>"; };
+		E16D72E31E88FB660031FB7C /* TaskHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskHandler.m; sourceTree = "<group>"; };
+		E16D72EA1E893DD70031FB7C /* AppBoxIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppBoxIcons.xcassets; sourceTree = "<group>"; };
 		E172E13B1DEEB3B900405EF2 /* GetSchemeScript.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GetSchemeScript.sh; sourceTree = "<group>"; };
+		E178C9891E95067F008D2CAF /* appbox.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appbox.plist; sourceTree = "<group>"; };
+		E18186CC1E8A3BC00002509F /* PreferencesTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesTabViewController.h; sourceTree = "<group>"; };
+		E18186CD1E8A3BC00002509F /* PreferencesTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesTabViewController.m; sourceTree = "<group>"; };
+		E18186D41E8A45C30002509F /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		E18186D51E8A45C30002509F /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
+		E18186DA1E8A47C10002509F /* AccountPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountPreferencesViewController.h; sourceTree = "<group>"; };
+		E18186DB1E8A47C10002509F /* AccountPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountPreferencesViewController.m; sourceTree = "<group>"; };
+		E18186DD1E8A47CD0002509F /* EmailPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailPreferencesViewController.h; sourceTree = "<group>"; };
+		E18186DE1E8A47CD0002509F /* EmailPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailPreferencesViewController.m; sourceTree = "<group>"; };
+		E18186E01E8A47D60002509F /* HelpPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPreferencesViewController.h; sourceTree = "<group>"; };
+		E18186E11E8A47D60002509F /* HelpPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPreferencesViewController.m; sourceTree = "<group>"; };
 		E188EA091D78485900EBCA52 /* BitlyURLShortenerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyURLShortenerService.h; sourceTree = "<group>"; };
 		E188EA0A1D78485900EBCA52 /* BitlyURLShortenerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyURLShortenerService.m; sourceTree = "<group>"; };
 		E188EA0B1D78485900EBCA52 /* GooglURLShortenerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglURLShortenerService.h; sourceTree = "<group>"; };
@@ -119,8 +176,6 @@
 		E188EA0D1D78485900EBCA52 /* NTAURLShortenerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTAURLShortenerService.h; sourceTree = "<group>"; };
 		E188EA0E1D78485900EBCA52 /* Tiny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tiny.h; sourceTree = "<group>"; };
 		E188EA0F1D78485900EBCA52 /* Tiny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tiny.m; sourceTree = "<group>"; };
-		E18DCB151DFE729300BD7F11 /* MailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailViewController.h; sourceTree = "<group>"; };
-		E18DCB161DFE729300BD7F11 /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailViewController.m; sourceTree = "<group>"; };
 		E1902B461E16423200C3E0F6 /* ProjectAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectAdvancedViewController.h; sourceTree = "<group>"; };
 		E1902B471E16423200C3E0F6 /* ProjectAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectAdvancedViewController.m; sourceTree = "<group>"; };
 		E1902B4D1E16617B00C3E0F6 /* NetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHandler.h; sourceTree = "<group>"; };
@@ -142,9 +197,22 @@
 		E1AA0F431E2F328300BA81A1 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		E1AA0F461E2F94F700BA81A1 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		E1AA0F471E2F94F700BA81A1 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
+		E1AE886F1F3F15780085B173 /* LocalServerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalServerHandler.h; sourceTree = "<group>"; };
+		E1AE88701F3F15780085B173 /* LocalServerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalServerHandler.m; sourceTree = "<group>"; };
 		E1AF8FD71E266CC000A57633 /* DropboxKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxKeys.h; sourceTree = "<group>"; };
+		E1C0246F1E9B4E6C00C87CC9 /* SlackClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackClient.h; sourceTree = "<group>"; };
+		E1C024701E9B4E6C00C87CC9 /* SlackClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlackClient.m; sourceTree = "<group>"; };
+		E1C024721E9B9DC700C87CC9 /* InstallPrivateKey.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = InstallPrivateKey.sh; sourceTree = "<group>"; };
 		E1CFC65C1D7E7FEA005872BE /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		E1CFC65D1D7E7FEA005872BE /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		E1D12EE01EC2F17B0065E59A /* SlackPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackPreferencesViewController.h; sourceTree = "<group>"; };
+		E1D12EE11EC2F17B0065E59A /* SlackPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlackPreferencesViewController.m; sourceTree = "<group>"; };
+		E1D12EE21EC2F17B0065E59A /* SlackPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlackPreferencesViewController.xib; sourceTree = "<group>"; };
+		E1D12EE51EC2F3E70065E59A /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
+		E1D12EE71EC2F4360065E59A /* PreferencesTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesTabViewController.xib; sourceTree = "<group>"; };
+		E1D12EE91EC2F5230065E59A /* EmailPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmailPreferencesViewController.xib; sourceTree = "<group>"; };
+		E1D12EEB1EC31AC80065E59A /* AccountPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountPreferencesViewController.xib; sourceTree = "<group>"; };
+		E1D12EED1EC320760065E59A /* HelpPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpPreferencesViewController.xib; sourceTree = "<group>"; };
 		E1D479C21E4AE4BC00BBC838 /* GitRepoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitRepoDetails.h; sourceTree = "<group>"; };
 		E1D479C31E4AE4BC00BBC838 /* GitRepoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitRepoDetails.m; sourceTree = "<group>"; };
 		E1D479C51E4B04A500BBC838 /* Project+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Project+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -159,6 +227,16 @@
 		E1D479CE1E4B04A500BBC838 /* CISetting+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CISetting+CoreDataClass.m"; sourceTree = "<group>"; };
 		E1D479CF1E4B04A500BBC838 /* CISetting+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CISetting+CoreDataProperties.h"; sourceTree = "<group>"; };
 		E1D479D01E4B04A500BBC838 /* CISetting+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CISetting+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E1DC25F91ECD826C001EF106 /* OtherServicesKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherServicesKeys.h; sourceTree = "<group>"; };
+		E1DC25FB1ECDBC16001EF106 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E1DC25FC1ECDBC16001EF106 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E1DC25FE1ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ProgressHud.h"; sourceTree = "<group>"; };
+		E1DC25FF1ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ProgressHud.m"; sourceTree = "<group>"; };
+		E1E215B51E869BDF0091565D /* ITCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITCLoginViewController.h; sourceTree = "<group>"; };
+		E1E215B61E869BDF0091565D /* ITCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITCLoginViewController.m; sourceTree = "<group>"; };
+		E1E215B91E869BF70091565D /* ITCLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITCLogin.h; sourceTree = "<group>"; };
+		E1E215BA1E869BF70091565D /* ITCLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITCLogin.m; sourceTree = "<group>"; };
+		E1FECA821E83EE5000C4E9AE /* HTTPStatusCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,15 +265,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E119EF611E3761CA00A7798E /* ALOutputParser */ = {
+		DBFC680A1F6AE942007A4ED2 /* EventTracker */ = {
 			isa = PBXGroup;
 			children = (
-				E119EF651E3764C600A7798E /* ALOutput.h */,
-				E119EF661E3764C600A7798E /* ALOutput.m */,
-				E119EF621E3763A000A7798E /* ALOutputParser.h */,
-				E119EF631E3763A000A7798E /* ALOutputParser.m */,
+				DBFC680B1F6AE957007A4ED2 /* EventTracker.h */,
+				DBFC680C1F6AE957007A4ED2 /* EventTracker.m */,
 			);
-			path = ALOutputParser;
+			path = EventTracker;
+			sourceTree = "<group>";
+		};
+		E11633961E558609005EAB31 /* MobileProvision */ = {
+			isa = PBXGroup;
+			children = (
+				E11633971E558635005EAB31 /* MobileProvision.h */,
+				E11633981E558635005EAB31 /* MobileProvision.m */,
+			);
+			path = MobileProvision;
 			sourceTree = "<group>";
 		};
 		E12A9AAA1E49F360002DDA3C /* CoreDataModel */ = {
@@ -226,6 +311,15 @@
 			path = DashboardViewController;
 			sourceTree = "<group>";
 		};
+		E13161EF1E97775100586052 /* RepoBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				E13161F01E9777DF00586052 /* RepoBuilder.h */,
+				E13161F11E9777DF00586052 /* RepoBuilder.m */,
+			);
+			path = RepoBuilder;
+			sourceTree = "<group>";
+		};
 		E139460F1DF2AFC200B3FAD0 /* ProjectModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +336,38 @@
 				E143637A1DF59AFD00FB10CA /* LogViewController.m */,
 			);
 			path = LogViewController;
+			sourceTree = "<group>";
+		};
+		E14A44191F277567006A9102 /* XCArchiveParser */ = {
+			isa = PBXGroup;
+			children = (
+				E14A44201F2775A2006A9102 /* XCArchiveParser.h */,
+				E14A44211F2775A2006A9102 /* XCArchiveParser.m */,
+				E14A441D1F277590006A9102 /* XCArchiveResult.h */,
+				E14A441E1F277590006A9102 /* XCArchiveResult.m */,
+			);
+			path = XCArchiveParser;
+			sourceTree = "<group>";
+		};
+		E14A441A1F277567006A9102 /* XCIPAParser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XCIPAParser;
+			sourceTree = "<group>";
+		};
+		E14A441B1F277567006A9102 /* XCSchemeParser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XCSchemeParser;
+			sourceTree = "<group>";
+		};
+		E14A441C1F277567006A9102 /* XCTeamIDParser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XCTeamIDParser;
 			sourceTree = "<group>";
 		};
 		E14F332E1E1A3D1300C3DD34 /* MenuHandler */ = {
@@ -310,6 +436,7 @@
 				E16437D61D743A4E00CE8B7E /* main.m */,
 				E16437E31D743A4E00CE8B7E /* Info.plist */,
 				E13946131DF2AFFF00B3FAD0 /* AppBoxPrefixHeader.pch */,
+				E178C9891E95067F008D2CAF /* appbox.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -328,7 +455,8 @@
 				E14363781DF59AC700FB10CA /* LogViewController */,
 				E12E6D061D8FC6E20054814D /* DashboardViewController */,
 				E1902B451E16420C00C3E0F6 /* ProjectAdvancedViewController */,
-				E18DCB141DFE727100BD7F11 /* MailViewController */,
+				E1E215B41E869BDF0091565D /* ITCLoginViewController */,
+				E16D72E61E8935060031FB7C /* PreferencesViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -347,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				E16437DE1D743A4E00CE8B7E /* Assets.xcassets */,
+				E16D72EA1E893DD70031FB7C /* AppBoxIcons.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -391,6 +520,62 @@
 			path = CIViewController;
 			sourceTree = "<group>";
 		};
+		E16D72D11E88F99A0031FB7C /* OutputParsers */ = {
+			isa = PBXGroup;
+			children = (
+				E14A44191F277567006A9102 /* XCArchiveParser */,
+				E14A441A1F277567006A9102 /* XCIPAParser */,
+				E14A441B1F277567006A9102 /* XCSchemeParser */,
+				E14A441C1F277567006A9102 /* XCTeamIDParser */,
+				E16D72D21E88F99A0031FB7C /* ALOutputParser */,
+			);
+			path = OutputParsers;
+			sourceTree = "<group>";
+		};
+		E16D72D21E88F99A0031FB7C /* ALOutputParser */ = {
+			isa = PBXGroup;
+			children = (
+				E16D72D31E88F99A0031FB7C /* ALOutput.h */,
+				E16D72D41E88F99A0031FB7C /* ALOutput.m */,
+				E16D72D51E88F99A0031FB7C /* ALOutputParser.h */,
+				E16D72D61E88F99A0031FB7C /* ALOutputParser.m */,
+			);
+			path = ALOutputParser;
+			sourceTree = "<group>";
+		};
+		E16D72D91E88F9EE0031FB7C /* XcodeHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E16D72DA1E88FA230031FB7C /* XCHandler.h */,
+				E16D72DB1E88FA230031FB7C /* XCHandler.m */,
+			);
+			path = XcodeHandler;
+			sourceTree = "<group>";
+		};
+		E16D72E11E88FB540031FB7C /* TaskHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E16D72E21E88FB660031FB7C /* TaskHandler.h */,
+				E16D72E31E88FB660031FB7C /* TaskHandler.m */,
+			);
+			path = TaskHandler;
+			sourceTree = "<group>";
+		};
+		E16D72E61E8935060031FB7C /* PreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1D12EDF1EC2F1420065E59A /* SlackPreferencesViewController */,
+				E18186D31E8A45C30002509F /* GeneralPreferencesViewController */,
+				E18186D71E8A479E0002509F /* AccountPreferencesViewController */,
+				E18186D81E8A479E0002509F /* EmailPreferencesViewController */,
+				E18186D91E8A479E0002509F /* HelpPreferencesViewController */,
+				E18186CC1E8A3BC00002509F /* PreferencesTabViewController.h */,
+				E18186CD1E8A3BC00002509F /* PreferencesTabViewController.m */,
+				E1D12EE71EC2F4360065E59A /* PreferencesTabViewController.xib */,
+			);
+			path = PreferencesViewController;
+			sourceTree = "<group>";
+		};
 		E172E13A1DEEB34D00405EF2 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,8 +584,51 @@
 				E13946141DF2FBAD00B3FAD0 /* ProjectBuildScript.sh */,
 				E191F7C21E1E7B2A00D2A590 /* ALAppStore.sh */,
 				E119EF5F1E3735EA00A7798E /* XCodePath.sh */,
+				E1C024721E9B9DC700C87CC9 /* InstallPrivateKey.sh */,
+				DB3D7CC81F64501F00217096 /* PythonServer.sh */,
+				DB45B4591F6EC3B80041EB42 /* SwitchXcode.sh */,
 			);
 			path = Commands;
+			sourceTree = "<group>";
+		};
+		E18186D31E8A45C30002509F /* GeneralPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E18186D41E8A45C30002509F /* PreferencesViewController.h */,
+				E18186D51E8A45C30002509F /* PreferencesViewController.m */,
+				E1D12EE51EC2F3E70065E59A /* PreferencesViewController.xib */,
+			);
+			path = GeneralPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		E18186D71E8A479E0002509F /* AccountPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E18186DA1E8A47C10002509F /* AccountPreferencesViewController.h */,
+				E18186DB1E8A47C10002509F /* AccountPreferencesViewController.m */,
+				E1D12EEB1EC31AC80065E59A /* AccountPreferencesViewController.xib */,
+			);
+			path = AccountPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		E18186D81E8A479E0002509F /* EmailPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E18186DD1E8A47CD0002509F /* EmailPreferencesViewController.h */,
+				E18186DE1E8A47CD0002509F /* EmailPreferencesViewController.m */,
+				E1D12EE91EC2F5230065E59A /* EmailPreferencesViewController.xib */,
+			);
+			path = EmailPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		E18186D91E8A479E0002509F /* HelpPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E18186E01E8A47D60002509F /* HelpPreferencesViewController.h */,
+				E18186E11E8A47D60002509F /* HelpPreferencesViewController.m */,
+				E1D12EED1EC320760065E59A /* HelpPreferencesViewController.xib */,
+			);
+			path = HelpPreferencesViewController;
 			sourceTree = "<group>";
 		};
 		E188EA071D78485900EBCA52 /* Tiny */ = {
@@ -423,15 +651,6 @@
 				E188EA0D1D78485900EBCA52 /* NTAURLShortenerService.h */,
 			);
 			path = NTAURLShortenerService;
-			sourceTree = "<group>";
-		};
-		E18DCB141DFE727100BD7F11 /* MailViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E18DCB151DFE729300BD7F11 /* MailViewController.h */,
-				E18DCB161DFE729300BD7F11 /* MailViewController.m */,
-			);
-			path = MailViewController;
 			sourceTree = "<group>";
 		};
 		E1902B451E16420C00C3E0F6 /* ProjectAdvancedViewController */ = {
@@ -477,6 +696,7 @@
 			children = (
 				E1902B4D1E16617B00C3E0F6 /* NetworkHandler.h */,
 				E1902B4E1E16617B00C3E0F6 /* NetworkHandler.m */,
+				E1FECA821E83EE5000C4E9AE /* HTTPStatusCode.h */,
 			);
 			path = NetworkHandler;
 			sourceTree = "<group>";
@@ -526,23 +746,90 @@
 			path = WindowController;
 			sourceTree = "<group>";
 		};
+		E1AE886E1F3F156A0085B173 /* LocalServerHandler */ = {
+			isa = PBXGroup;
+			children = (
+				E1AE886F1F3F15780085B173 /* LocalServerHandler.h */,
+				E1AE88701F3F15780085B173 /* LocalServerHandler.m */,
+			);
+			path = LocalServerHandler;
+			sourceTree = "<group>";
+		};
+		E1C0246E1E9B4E4C00C87CC9 /* SlackClient */ = {
+			isa = PBXGroup;
+			children = (
+				E1C0246F1E9B4E6C00C87CC9 /* SlackClient.h */,
+				E1C024701E9B4E6C00C87CC9 /* SlackClient.m */,
+			);
+			path = SlackClient;
+			sourceTree = "<group>";
+		};
 		E1CFC65B1D7E7FD9005872BE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E1902B491E16617B00C3E0F6 /* GitHandler */,
 				E1902B501E16617B00C3E0F6 /* UserData */,
+				E1902B491E16617B00C3E0F6 /* GitHandler */,
+				E1C0246E1E9B4E4C00C87CC9 /* SlackClient */,
+				E13161EF1E97775100586052 /* RepoBuilder */,
 				E1902B4A1E16617B00C3E0F6 /* MacHandler */,
 				E1902B4B1E16617B00C3E0F6 /* MailHandler */,
-				E119EF611E3761CA00A7798E /* ALOutputParser */,
-				E1902B4C1E16617B00C3E0F6 /* NetworkHandler */,
+				E16D72E11E88FB540031FB7C /* TaskHandler */,
+				E16D72D91E88F9EE0031FB7C /* XcodeHandler */,
+				DBFC680A1F6AE942007A4ED2 /* EventTracker */,
+				E16D72D11E88F99A0031FB7C /* OutputParsers */,
+				E1DC25FA1ECDBC16001EF106 /* ProgressHUD */,
+				E1E215B81E869BF70091565D /* ITCLoginClient */,
 				E1902B4F1E16617B00C3E0F6 /* UpdateHandler */,
+				E11633961E558609005EAB31 /* MobileProvision */,
+				E1902B4C1E16617B00C3E0F6 /* NetworkHandler */,
 				E1902B611E1662E300C3E0F6 /* KeychainHandler */,
+				E1AE886E1F3F156A0085B173 /* LocalServerHandler */,
 				E1AF8FD71E266CC000A57633 /* DropboxKeys.h */,
+				E1DC25F91ECD826C001EF106 /* OtherServicesKeys.h */,
 				E16018F11DEC0EB700E3A377 /* Constants.h */,
 				E1CFC65C1D7E7FEA005872BE /* Common.h */,
 				E1CFC65D1D7E7FEA005872BE /* Common.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E1D12EDF1EC2F1420065E59A /* SlackPreferencesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1D12EE01EC2F17B0065E59A /* SlackPreferencesViewController.h */,
+				E1D12EE11EC2F17B0065E59A /* SlackPreferencesViewController.m */,
+				E1D12EE21EC2F17B0065E59A /* SlackPreferencesViewController.xib */,
+			);
+			path = SlackPreferencesViewController;
+			sourceTree = "<group>";
+		};
+		E1DC25FA1ECDBC16001EF106 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC25FB1ECDBC16001EF106 /* MBProgressHUD.h */,
+				E1DC25FC1ECDBC16001EF106 /* MBProgressHUD.m */,
+				E1DC25FE1ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.h */,
+				E1DC25FF1ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		E1E215B41E869BDF0091565D /* ITCLoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E1E215B51E869BDF0091565D /* ITCLoginViewController.h */,
+				E1E215B61E869BDF0091565D /* ITCLoginViewController.m */,
+			);
+			path = ITCLoginViewController;
+			sourceTree = "<group>";
+		};
+		E1E215B81E869BF70091565D /* ITCLoginClient */ = {
+			isa = PBXGroup;
+			children = (
+				E1E215B91E869BF70091565D /* ITCLogin.h */,
+				E1E215BA1E869BF70091565D /* ITCLogin.m */,
+			);
+			path = ITCLoginClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -610,11 +897,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13946161DF2FBAD00B3FAD0 /* ProjectBuildScript.sh in Resources */,
+				DB45B45B1F6EC5EE0041EB42 /* PythonServer.sh in Resources */,
 				E10B821E1DF043EA00BBE0CD /* GetSchemeScript.sh in Resources */,
+				E1D12EE41EC2F17B0065E59A /* SlackPreferencesViewController.xib in Resources */,
 				E119EF601E373C9B00A7798E /* ALAppStore.sh in Resources */,
+				E1D12EE61EC2F3E70065E59A /* PreferencesViewController.xib in Resources */,
+				E1C024731E9B9DD500C87CC9 /* InstallPrivateKey.sh in Resources */,
+				E1D12EEA1EC2F5230065E59A /* EmailPreferencesViewController.xib in Resources */,
 				E10B82221DF0498800BBE0CD /* TeamIDScript.sh in Resources */,
 				9740CD411E005DB100224D9F /* Main.storyboard in Resources */,
+				E16D72E51E8912790031FB7C /* XCodePath.sh in Resources */,
+				E16D72EB1E893DD70031FB7C /* AppBoxIcons.xcassets in Resources */,
+				DB45B45C1F6EC5F10041EB42 /* SwitchXcode.sh in Resources */,
+				E1D12EE81EC2F4360065E59A /* PreferencesTabViewController.xib in Resources */,
 				E16437DF1D743A4E00CE8B7E /* Assets.xcassets in Resources */,
+				E1D12EEE1EC320760065E59A /* HelpPreferencesViewController.xib in Resources */,
+				E1D12EEC1EC31AC80065E59A /* AccountPreferencesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,9 +925,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppBox/Pods-AppBox-frameworks.sh",
+				"${PODS_ROOT}/Sparkle/Sparkle.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -642,9 +943,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AppBox/Pods-AppBox-resources.sh",
+				"${PODS_ROOT}/Google-Analytics-for-OS-X/GoogleAnalyticsTracker/AnalyticsWindow.xib",
+				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -657,13 +962,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppBox-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1974F331E20CA770060F03F /* ShellScript */ = {
@@ -689,38 +997,56 @@
 				E1902B541E16617B00C3E0F6 /* UserData.m in Sources */,
 				E188EA121D78485900EBCA52 /* Tiny.m in Sources */,
 				E16437DD1D743A4E00CE8B7E /* AppBox.xcdatamodeld in Sources */,
-				E119EF641E3763A000A7798E /* ALOutputParser.m in Sources */,
 				E1AA0F481E2F94F700BA81A1 /* WindowController.m in Sources */,
 				E16437D71D743A4E00CE8B7E /* main.m in Sources */,
 				E1902B481E16423200C3E0F6 /* ProjectAdvancedViewController.m in Sources */,
-				E119EF671E3764C600A7798E /* ALOutput.m in Sources */,
 				E16018F01DEC0BC200E3A377 /* DropboxViewController.m in Sources */,
 				E16437D41D743A4E00CE8B7E /* AppDelegate.m in Sources */,
 				E1D479C41E4AE4BC00BBC838 /* GitRepoDetails.m in Sources */,
 				E1902B571E16619800C3E0F6 /* GitHandler.m in Sources */,
 				E16724601E1D2AE000346502 /* CIViewController.m in Sources */,
+				E16D72DC1E88FA230031FB7C /* XCHandler.m in Sources */,
 				E1902B531E16617B00C3E0F6 /* NetworkHandler.m in Sources */,
 				E1D479D61E4B04A500BBC838 /* CISetting+CoreDataProperties.m in Sources */,
-				E18DCB171DFE729300BD7F11 /* MailViewController.m in Sources */,
+				E14A441F1F277590006A9102 /* XCArchiveResult.m in Sources */,
 				E1902B5A1E1661A300C3E0F6 /* MacHandler.m in Sources */,
 				E1CFC65E1D7E7FEA005872BE /* Common.m in Sources */,
 				E1D479D21E4B04A500BBC838 /* Project+CoreDataProperties.m in Sources */,
+				E18186DC1E8A47C10002509F /* AccountPreferencesViewController.m in Sources */,
 				E12E6D0A1D8FC77D0054814D /* DashboardViewController.m in Sources */,
+				E1D12EE31EC2F17B0065E59A /* SlackPreferencesViewController.m in Sources */,
 				E15C266A1D7FD5CE004243B9 /* ShowLinkViewController.m in Sources */,
+				E11633991E558635005EAB31 /* MobileProvision.m in Sources */,
 				E1902B601E1661BE00C3E0F6 /* UpdateHandler.m in Sources */,
 				E14F33341E1A64CA00C3DD34 /* NSApplication+MenuHandler.m in Sources */,
 				E13946121DF2AFCF00B3FAD0 /* XCProject.m in Sources */,
 				E188EA111D78485900EBCA52 /* GooglURLShortenerService.m in Sources */,
+				DBFC680D1F6AE957007A4ED2 /* EventTracker.m in Sources */,
+				E16D72D81E88F99A0031FB7C /* ALOutputParser.m in Sources */,
+				E1C024711E9B4E6C00C87CC9 /* SlackClient.m in Sources */,
 				E1D479D11E4B04A500BBC838 /* Project+CoreDataClass.m in Sources */,
 				E16437F31D743B6800CE8B7E /* HomeViewController.m in Sources */,
 				E1AA0F441E2F328300BA81A1 /* QRCodeViewController.m in Sources */,
+				E1DC25FD1ECDBC16001EF106 /* MBProgressHUD.m in Sources */,
+				E1E215BB1E869BF70091565D /* ITCLogin.m in Sources */,
 				E1902B641E16633A00C3E0F6 /* KeychainHandler.m in Sources */,
 				E1902B5D1E1661B300C3E0F6 /* MailHandler.m in Sources */,
+				E1DC26001ECDBCA8001EF106 /* MBProgressHUD+ProgressHud.m in Sources */,
+				E16D72D71E88F99A0031FB7C /* ALOutput.m in Sources */,
+				E16D72E41E88FB660031FB7C /* TaskHandler.m in Sources */,
+				E18186D61E8A45C30002509F /* PreferencesViewController.m in Sources */,
+				E18186DF1E8A47CD0002509F /* EmailPreferencesViewController.m in Sources */,
+				E13161F21E9777DF00586052 /* RepoBuilder.m in Sources */,
 				E143637B1DF59AFD00FB10CA /* LogViewController.m in Sources */,
+				E1AE88711F3F15780085B173 /* LocalServerHandler.m in Sources */,
+				E18186E21E8A47D60002509F /* HelpPreferencesViewController.m in Sources */,
 				E1D479D51E4B04A500BBC838 /* CISetting+CoreDataClass.m in Sources */,
+				E18186CE1E8A3BC00002509F /* PreferencesTabViewController.m in Sources */,
 				E1D479D41E4B04A500BBC838 /* UploadRecord+CoreDataProperties.m in Sources */,
+				E14A44221F2775A2006A9102 /* XCArchiveParser.m in Sources */,
 				E188EA101D78485900EBCA52 /* BitlyURLShortenerService.m in Sources */,
 				E1D479D31E4B04A500BBC838 /* UploadRecord+CoreDataClass.m in Sources */,
+				E1E215B71E869BDF0091565D /* ITCLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

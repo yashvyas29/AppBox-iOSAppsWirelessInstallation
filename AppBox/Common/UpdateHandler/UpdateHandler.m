@@ -21,7 +21,8 @@
     [alert addButtonWithTitle:@"NO"];
     if ([alert runModal] == NSAlertFirstButtonReturn){
         [[NSWorkspace sharedWorkspace] openURL:url];
-        [Answers logCustomEventWithName:@"External Links" customAttributes:@{@"title":@"Update"}];
+        [EventTracker logEventWithName:@"External Links" customAttributes:@{@"title":@"Update"}
+                                action:@"title" label:@"Update" value:@1];
     }
 }
 
@@ -60,6 +61,11 @@
         completion(false, nil);
         [[AppDelegate appDelegate] addSessionLog:[NSString stringWithFormat:@"Exception %@",exception.userInfo]];
     }
+}
+
++(void)a{
+    SUUpdater *updater;
+    [updater checkForUpdates:nil];
 }
 
 @end

@@ -24,6 +24,7 @@
 
 
 - (IBAction)preferencesTapped:(NSMenuItem *)sender {
+    [PreferencesTabViewController presentPreferences];
 }
 
 #pragma mark - File
@@ -31,12 +32,12 @@
     [self updateDropboxUsageFileButton];
     
     //get spaces usage
-    [[[DropboxClientsManager authorizedClient].usersRoutes getSpaceUsage]
-     response:^(DBUSERSSpaceUsage * _Nullable spaceUsage, DBNilObject * _Nullable nilObject, DBRequestError * _Nullable error) {
-         if (spaceUsage){
+    [[[DBClientsManager authorizedClient].usersRoutes getSpaceUsage]
+     setResponseBlock:^(DBUSERSSpaceUsage * _Nullable response, DBNilObject * _Nullable routeError, DBRequestError * _Nullable error) {
+         if (response){
              @try {
-                 NSNumber *usage = @(spaceUsage.used.longValue / abBytesToMB);
-                 NSNumber *allocated = @(spaceUsage.allocation.individual.allocated.longValue / abBytesToMB);
+                 NSNumber *usage = @(response.used.longValue / abBytesToMB);
+                 NSNumber *allocated = @(response.allocation.individual.allocated.longValue / abBytesToMB);
                  
                  //save space usage in user default
                  [UserData setDropboxUsedSpace:usage];
@@ -52,7 +53,7 @@
                      [Common showAlertWithTitle:@"Warning" andMessage:[NSString stringWithFormat:@"You're running out of Dropbox space\n\n %@MB of %@MB used.", usage, allocated]];
                  }
              } @catch (NSException *exception) {
-                 [Answers logCustomEventWithName:@"Exception" customAttributes:@{@"error desc": exception.debugDescription}];
+                 [EventTracker logEventWithName:@"Exception" customAttributes:@{@"error desc": exception.debugDescription} action:@"error desc" label:exception.debugDescription value:@1];
              }
          }
      }];
@@ -65,21 +66,6 @@
 }
 
 #pragma mark - Accounts
-- (IBAction)logoutGmailTapped:(NSMenuItem *)sender {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText: @"Are you sure?"];
-    [alert setInformativeText:@"Do you want to logout current gmail account?"];
-    [alert setAlertStyle:NSInformationalAlertStyle];
-    [alert addButtonWithTitle:@"Yes"];
-    [alert addButtonWithTitle:@"No"];
-    if ([alert runModal] == NSAlertFirstButtonReturn){
-        [sender setEnabled:NO];
-        [UserData setIsGmailLoggedIn:NO];
-        [KeychainHandler removeAllStoredCredentials];
-        [[NSNotificationCenter defaultCenter] postNotificationName:abGmailLoggedOutNotification object:sender];
-    }
-}
-
 - (IBAction)logoutDropBoxTapped:(NSMenuItem *)sender {
     NSAlert *alert = [[NSAlert alloc] init];
     [alert setMessageText: @"Are you sure?"];
@@ -92,27 +78,29 @@
         [sender setEnabled:NO];
     }
 }
+- (IBAction)dropboxSpaceTapped:(NSMenuItem *)sender {
+    [self updateDropboxUsage];
+}
 
 #pragma mark - Help
 - (IBAction)helpButtonTapped:(NSMenuItem *)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:abDocumentationURL]];
-    [Answers logCustomEventWithName:@"External Links" customAttributes:@{@"title":@"Help"}];
+    [EventTracker logEventWithName:@"External Links" customAttributes:@{@"title":@"Help"} action:@"title" label:@"Help" value:@1];
 }
 
 - (IBAction)latestNewsTapped:(NSMenuItem *)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:abTwitterURL]];
-    [Answers logCustomEventWithName:@"External Links" customAttributes:@{@"title":@"Twitter"}];
-
+    [EventTracker logEventWithName:@"External Links" customAttributes:@{@"title":@"Twitter"} action:@"title" label:@"Twitter" value:@1];
 }
 
 - (IBAction)releaseNotesTapped:(NSMenuItem *)sender {
-    [Answers logCustomEventWithName:@"External Links" customAttributes:@{@"title":@"Release Notes"}];
+    [EventTracker logEventWithName:@"External Links" customAttributes:@{@"title":@"Release Notes"} action:@"title" label:@"Release Notes" value:@1];
     NSString *versionString = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",abGitHubReleaseBaseURL,versionString]]];
 }
 
 - (IBAction)licenseTapped:(NSMenuItem *)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:abLicenseURL]];
-    [Answers logCustomEventWithName:@"External Links" customAttributes:@{@"title":@"License"}];
+    [EventTracker logEventWithName:@"External Links" customAttributes:@{@"title":@"License"} action:@"title" label:@"License" value:@1];
 }
 @end

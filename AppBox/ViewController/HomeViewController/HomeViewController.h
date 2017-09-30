@@ -8,13 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ALOutputParser.h"
+#import "XCArchiveParser.h"
+#import "MobileProvision.h"
 #import "CIViewController.h"
-#import "MailViewController.h"
 #import "DropboxViewController.h"
 #import "ShowLinkViewController.h"
+#import "ITCLoginViewController.h"
 #import "ProjectAdvancedViewController.h"
 
-@interface HomeViewController : NSViewController <MailDelegate, NSTabViewDelegate>{
+@interface HomeViewController : NSViewController <NSTabViewDelegate, ProjectAdvancedViewDelegate, ITCLoginDelegate>{
     //Tab
     IBOutlet NSTabView *tabView;
     
@@ -29,7 +31,6 @@
     
     //Upload IPA
     IBOutlet NSPathControl *pathIPAFile;
-    IBOutlet NSTextField *textFieldBundleIdentifier;
     IBOutlet NSButton *buttonUniqueLink;
     
     //Mail and Shutdown
@@ -37,11 +38,6 @@
     IBOutlet NSButton *buttonShutdownMac;
     IBOutlet NSTextField *textFieldEmail;
     IBOutlet NSTextField *textFieldMessage;
-    
-    //Status
-    IBOutlet NSTextField *labelStatus;
-    IBOutlet NSView *viewProgressStatus;
-    IBOutlet NSProgressIndicator *progressIndicator;
 }
 
 - (IBAction)actionButtonTapped:(NSButton *)sender;

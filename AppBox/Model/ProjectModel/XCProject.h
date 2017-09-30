@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#define BuildTypeUnknown @"unknown"
 #define BuildTypeAdHoc @"ad-hoc"
 #define BuildTypePackage @"package"
 #define BuildTypeAppStore @"app-store"
@@ -57,6 +58,7 @@
 @property(nonatomic, retain) NSDictionary *exportOptionsPlist;
 
 //UniqueLink.json
+@property(nonatomic, assign) BOOL isKeepSameLinkEnabled;
 @property(nonatomic, retain) NSURL *uniquelinkShareableURL;
 @property(nonatomic, retain) DBFILESFileMetadata *uniqueLinkJsonMetaData;
 
@@ -72,11 +74,18 @@
 @property(nonatomic, retain) NSURL *appLongShareableURL;
 @property(nonatomic, retain) NSURL *appShortShareableURL;
 
+//CI Settings
+@property(nonatomic, retain) NSString *branch;
+@property(nonatomic, retain) NSString *emails;
+@property(nonatomic, retain) NSNumber *shutdownMac;
+@property(nonatomic, retain) NSNumber *keepSameLink;
+@property(nonatomic, retain) NSString *personalMessage;
+
 - (BOOL)isValidProjectInfoPlist;
-- (void)upadteDbDirectoryByBundleDirectory;
-- (void)createExportOptionPlist;
+- (BOOL)createExportOptionPlist;
 - (void)createUDIDAndIsNew:(BOOL)isNew;
--(void)createManifestWithIPAURL:(NSURL *)ipaURL completion:(void(^)(NSURL *manifestURL))completion;
+- (void)upadteDbDirectoryByBundleDirectory;
+- (void)createManifestWithIPAURL:(NSURL *)ipaURL completion:(void(^)(NSURL *manifestURL))completion;
 
 - (NSString *)buildMailURLStringForEmailId:(NSString *)mailId andMessage:(NSString *)message;
 @end
