@@ -20,20 +20,22 @@
     [super viewDidLoad];
     
     //Log Screen
-    [Common logScreen:@"Dropbox Login"];
+    [EventTracker logScreen:@"Dropbox Login"];
     
     //DB Authentication Notification
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLoggedInNotification:) name:abDropBoxLoggedInNotification object:nil];
 }
 
 - (IBAction)buttonConnectDropboxTapped:(NSButton *)sender {
-    [Answers logCustomEventWithName:@"Authenticating Dropbox " customAttributes:nil];
+    [EventTracker logEventWithName:@"Authenticating Dropbox" customAttributes:nil action:nil label:nil value:nil];
     //Authenticate user
-    [DropboxClientsManager authorizeFromControllerDesktop:[NSWorkspace sharedWorkspace] controller:self openURL:^(NSURL *url){ [[NSWorkspace sharedWorkspace] openURL:url];} browserAuth:YES];
+    [DBClientsManager authorizeFromControllerDesktop:[NSWorkspace sharedWorkspace] controller:self openURL:^(NSURL * _Nonnull url) {
+        [[NSWorkspace sharedWorkspace] openURL:url];
+    }];
 }
 
 - (IBAction)buttonQuitTapped:(NSButton *)sender {
-    [Answers logCustomEventWithName:@"AppBox terminated before Dropbox LoggedIN :( " customAttributes:nil];
+    [EventTracker logEventWithName:@"AppBox terminated before Dropbox LoggedIN :(" customAttributes:nil action:nil label:nil value:nil];
     [self dismissController:self];
     [NSApp terminate:self];
 }

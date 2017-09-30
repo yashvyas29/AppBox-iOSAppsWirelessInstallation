@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LocalServerHandler.h"
 
 @class ProjectAdvancedViewController;
 @protocol ProjectAdvancedViewDelegate <NSObject>
@@ -17,19 +18,20 @@
 @end
 
 @interface ProjectAdvancedViewController : NSViewController{
-    IBOutlet NSPathControl *pathBuild;
-    IBOutlet NSPathControl *pathXCode;
-    IBOutlet NSTextField *textFieldUserName;
-    IBOutlet NSSecureTextField *textFieldPassword;
+    
 }
 
 @property(nonatomic, strong) XCProject *project;
 @property(weak) id <ProjectAdvancedViewDelegate> delegate;
 
+@property (weak) IBOutlet NSButton *localNetworkCheckBox;
+@property (weak) IBOutlet NSTextField *dbFolderNameTextField;
+
+
 - (IBAction)buttonSaveTapped:(NSButton *)sender;
 - (IBAction)buttonCancelTapped:(NSButton *)sender;
-- (IBAction)buildPathHandler:(NSPathControl *)sender;
-- (IBAction)xcodePathHandler:(NSPathControl *)sender;
+- (IBAction)buttonLocalNetworkStateChanged:(NSButton *)sender;
+
 
 
 @end

@@ -9,29 +9,19 @@
 #import "ProjectAdvancedViewController.h"
 
 @implementation ProjectAdvancedViewController{
-    NSDictionary *keyChainAccount;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [Common logScreen:@"Project Advanced Settings"];
-    if ([self.project.buildType isEqualToString:BuildTypeAppStore]){
-        NSString *xcodePath = [UserData xCodeLocation];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:xcodePath]){
-            [pathXCode setURL: [NSURL URLWithString:xcodePath]];
-        }
-    }else{
-        [pathXCode setEnabled:NO];
-        [textFieldUserName setEnabled:NO];
-        [textFieldPassword setEnabled:NO];
+    [EventTracker logScreen:@"Project Advanced Settings"];
+    if (self.project.bundleDirectory) {
+        [self.dbFolderNameTextField setStringValue:self.project.bundleDirectory.lastPathComponent];
     }
-    [pathBuild setURL:self.project.buildDirectory];
-    NSArray *accounts = [SAMKeychain accountsForService:abiTunesConnectService];
-    if (accounts.count > 0){
-        keyChainAccount = [NSDictionary dictionaryWithDictionary:[accounts firstObject]];
-        [textFieldUserName setStringValue: [keyChainAccount valueForKey:kSAMKeychainAccountKey]];
-        [textFieldPassword setPlaceholderString:@"Taken from keychain. Type here to change."];
-    }
+    [self.dbFolderNameTextField setEnabled:self.project.isKeepSameLinkEnabled];
+    [LocalServerHandler getLocalIPAddressWithCompletion:^(NSString *ipAddress) {
+        [self.localNetworkCheckBox setTitle: ipAddress];
+    }];
 }
 
 //MARK: - Action Button Tapped
@@ -40,53 +30,32 @@
     [self.delegate projectAdvancedCancelButtonTapped:sender];
 }
 
+- (IBAction)buttonLocalNetworkStateChanged:(NSButton *)sender {
+    if (sender.state == NSOnState) {
+        [MBProgressHUD showStatus:@"Starting Local Server..." onView:self.view];
+        [TaskHandler runTaskWithName:@"PythonServer" andArgument:@[[UserData buildLocation].absoluteString] taskLaunch:nil outputStream:^(NSTask *task, NSString *output) {
+            [[AppDelegate appDelegate] addSessionLog:output];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }];
+    }
+}
+
 - (IBAction)buttonSaveTapped:(NSButton *)sender {
-    [[textFieldPassword window] makeFirstResponder:self.view];
-    [UserData setBuildLocation:self.project.buildDirectory];
-    
-    //set xcode and application loader path
-    if (pathXCode.URL.isFileURL){
-        [self.project setXcodePath:[pathXCode.URL.filePathURL resourceSpecifier]];
-    }else{
-        [self.project setXcodePath: pathXCode.URL.absoluteString];
-    }
-    [self.project setAlPath: [[self.project.xcodePath stringByAppendingPathComponent:abApplicationLoaderLocation] stringByRemovingPercentEncoding]];
-    
-    //set xcode location
-    [UserData setXCodeLocation:self.project.xcodePath];
-    
-    //set username and password
-    [self.project setItcUserName:textFieldUserName.stringValue];
-    if (textFieldPassword.stringValue.length > 0){
-        [self.project setItcPasswod:textFieldPassword.stringValue];
-        //save username and password in keychain
-        [SAMKeychain setPassword:textFieldPassword.stringValue forService:abiTunesConnectService account:textFieldUserName.stringValue];
-    }else{
-        [self.project setItcPasswod:[NSString stringWithFormat:abiTunesConnectService]];
-    }
-    
     if (self.delegate != nil){
         [self.delegate projectAdvancedSaveButtonTapped:sender];
     }
     
+    if(![self.dbFolderNameTextField.stringValue isEqualToString:self.project.identifer] && self.dbFolderNameTextField.stringValue.length>0){
+        NSString *bundlePath = [NSString stringWithFormat:@"/%@",self.dbFolderNameTextField.stringValue];
+        bundlePath = [bundlePath stringByReplacingOccurrencesOfString:@" " withString:abEmptyString];
+        [self.project setBundleDirectory:[NSURL URLWithString:bundlePath]];
+    }
+
     [self dismissController:self];
 }
 
 
-//Build Path Handler
-- (IBAction)buildPathHandler:(NSPathControl *)sender {
-    if (![self.project.buildDirectory isEqualTo:sender.URL]){
-        if ([[sender.URL.resourceSpecifier stringByRemovingPercentEncoding] containsString:@" "]){
-            [Common showAlertWithTitle:@"Error" andMessage:[NSString stringWithFormat:@"Please select directory without any spaces.\n\n%@",[sender.URL.resourceSpecifier stringByRemovingPercentEncoding]]];
-            [sender setURL:self.project.buildDirectory];
-        }else{
-            [self.project setBuildDirectory: sender.URL];
-        }
-    }
-}
 
-//Xcode Path Handler
-- (IBAction)xcodePathHandler:(NSPathControl *)sender {
 
-}
+
 @end
