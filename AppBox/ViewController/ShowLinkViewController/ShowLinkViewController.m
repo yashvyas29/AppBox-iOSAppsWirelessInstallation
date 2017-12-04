@@ -23,12 +23,14 @@
     [textFieldAppLink setStringValue: self.project.appShortShareableURL.absoluteString];
     [textFieldHint setStringValue: ([self.project.appShortShareableURL isEqualTo:self.project.appLongShareableURL]) ? LongURLUserHint : ShortURLUserHint];
     [[AppDelegate appDelegate] addSessionLog:[NSString stringWithFormat:@"App URL - %@",textFieldHint.stringValue]];
+    
+    //Save Project Details
+    [Project addProjectWithXCProject:self.project andSaveDetails:SaveUploadDetails];
 }
 
 
 - (IBAction)buttonCopyToClipboardTapped:(NSButton *)sender {
-    [EventTracker logEventWithName:@"Copy to Clipboard" customAttributes:@{@"Copy to Clipboard":@1}
-                            action:@"Copy to Clipboard" label:@"Copy to Clipboard" value:@1];
+    [EventTracker logEventWithType:LogEventTypeCopyToClipboard];
     [[NSPasteboard generalPasteboard] clearContents];
     [[NSPasteboard generalPasteboard] setString:self.project.appShortShareableURL.absoluteString  forType:NSStringPboardType];
     [sender setTitle:@"Copied!!"];
@@ -36,6 +38,7 @@
         [sender setTitle:@"Copy to Clipboard"];
     });
 }
+
 
 - (IBAction)buttonCloseTapped:(NSButton *)sender {
     [self dismissController:self];
@@ -45,6 +48,8 @@
 -(void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender{
     if ([segue.destinationController isKindOfClass:[QRCodeViewController class]]){
         ((QRCodeViewController *) segue.destinationController).project = self.project;
+    } else if([segue.destinationController isKindOfClass:[DashboardViewController class]]) {
+        [EventTracker logEventWithType:LogEventTypeOpenDashboardFromShowLink];
     }
 }
 

@@ -8,12 +8,6 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
-- (IBAction)saveAction:(id)sender;
-
-@end
-
 @implementation AppDelegate
 
 - (void)awakeFromNib{
@@ -27,6 +21,10 @@
     NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
     [center setDelegate:self];
     self.sessionLog = [[NSMutableString alloc] init];
+    
+    //Default Setting
+    [DefaultSettings setFirstTimeSettings];
+    [DefaultSettings setEveryStartupSettings];
     
     //Check Dropbox Keys
     //[Common checkDropboxKeys];
@@ -63,7 +61,7 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    
+    [self saveCoreDataChanges];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender{
@@ -228,7 +226,7 @@
 
 #pragma mark - Core Data Saving and Undo support
 
-- (IBAction)saveAction:(id)sender {
+- (void)saveCoreDataChanges{
     // Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
     if (![[self managedObjectContext] commitEditing]) {
         NSLog(@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd));

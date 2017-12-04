@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
 
+#import "DefaultSettings.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) NSMutableString *sessionLog;
@@ -18,6 +20,7 @@
 
 +(AppDelegate *)appDelegate;
 -(void)addSessionLog:(NSString *)sessionLog;
+- (void)saveCoreDataChanges;
 
 @property (nonatomic) BOOL processing;
 @property (nonatomic) BOOL isReadyToBuild;
