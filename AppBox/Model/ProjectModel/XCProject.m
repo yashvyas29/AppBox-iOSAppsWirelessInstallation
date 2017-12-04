@@ -66,6 +66,9 @@
     NSMutableDictionary *exportOption = [[NSMutableDictionary alloc] init];
     [exportOption setValue:self.teamId forKey:@"teamID"];
     [exportOption setValue:self.buildType forKey:@"method"];
+    [exportOption setValue:[NSNumber numberWithBool:[UserData uploadBitcode]] forKey:@"uploadBitcode"];
+    [exportOption setValue:[NSNumber numberWithBool:[UserData uploadSymbols]] forKey:@"uploadSymbols"];
+    [exportOption setValue:[NSNumber numberWithBool:[UserData compileBitcode]] forKey:@"compileBitcode"];
     return [exportOption writeToFile:[self.exportOptionsPlistPath.resourceSpecifier stringByRemovingPercentEncoding] atomically:YES];
 }
 
@@ -150,6 +153,14 @@
     [self upadteDbDirectoryByBundleDirectory];
 }
 
+-(void)setMobileProvision:(MobileProvision *)mobileProvision{
+    _mobileProvision = mobileProvision;
+    if (self.mobileProvision){
+        if (!self.teamId) self.teamId = self.mobileProvision.teamId;
+        if (!self.buildType) self.buildType = self.mobileProvision.buildType;
+    }
+}
+
 - (void)upadteDbDirectoryByBundleDirectory{
     //Build URL for DropBox
     NSString *validName = [self validURLString:self.name];
@@ -165,7 +176,12 @@
     [self setDbIPAFullPath:[NSURL URLWithString:dbIPAFullPathString]];
     
     [self setDbManifestFullPath:[NSURL URLWithString:[NSString stringWithFormat:@"%@/manifest.plist",toPath]]];
-    [self setDbAppInfoJSONFullPath:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",validBundleDirectory,abAppInfoFileName]]];
+    
+    if (self.isKeepSameLinkEnabled){
+        [self setDbAppInfoJSONFullPath:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",validBundleDirectory,abAppInfoFileName]]];
+    } else {
+        [self setDbAppInfoJSONFullPath:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",toPath, abAppInfoFileName]]];
+    }
 }
 
 - (void)setBuildListInfo:(NSDictionary *)buildListInfo{

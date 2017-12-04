@@ -14,18 +14,26 @@
 #define abInstallWebAppBaseURL @"https://tryapp.github.io"
 #define abMailGunBaseURL @"https://api.mailgun.net/v3/tryappbox.com/messages"
 #define abGitHubReleaseBaseURL @"https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/releases/tag/"
+//#define abDropBoxAppBaseURL @"https://www.dropbox.com/home/Apps/AppBox%20-%20Powered%20by%20DB"
+#define abDropBoxAppBaseURL @"https://www.dropbox.com/home/Apps/AppBox%20-%20Build%2C%20Test%20and%20Distribute%20iOS%20Apps"
+
 
 //MailGun
 #define abMailGunFromEmail @"AppBox Build <mailgun@tryappbox.com>"
 
 //Other URL's
 #define abDefaultLatestDownloadURL @"https://tryappbox.github.io/download"
-#define abDocumentationURL @"https://iosappswirelessinstallation.codeplex.com/documentation"
+#define abDocumentationURL @"https://tryappbox.github.io/help/"
 #define abLicenseURL @"https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation#user-content-license"
 #define abGitHubLatestRelease @"https://api.github.com/repos/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/releases/latest"
 #define abTwitterURL @"https://twitter.com/tryappbox"
 #define abSlackImage @"https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2017-04-06/165993935268_ec0c0ba40483382c7192_512.png"
 #define abWebHookSetupURL @"https://my.slack.com/apps/new/A0F7XDUAZ-incoming-webhooks"
+
+//Unique links
+static NSString *const UNIQUE_LINK_SHARED = @"uniqueLinkShared";
+static NSString *const UNIQUE_LINK_SHORT = @"uniqueLinkShort";
+static NSString *const FILE_NAME_UNIQUE_JSON = @"appinfo.json";
 
 //AppBox AppStore service. Note: these constanst also need to change in ALAppStore.sh file
 #define abALUploadApp @"upload-app"
@@ -46,7 +54,7 @@
 //messages
 #define abKeepSameLinkHelpTitle @"What is keep same link for all future upload?"
 #define abKeepSameLinkHelpMessage  @"This feature will keep same short url for all future ipa uploaded with same bundle identifier, this means old ipa url will replaced by new ipa file. You can change the link by providing a \"Custom Dropbox Folder Name\" in \"Other Setting\". \n\nIf this option is enable, you can also download the previous build with same url."
-#define abKeepSameLinkReadMoreURL @"https://iosappswirelessinstallation.codeplex.com/wikipage?title=KeepSameLink"
+#define abKeepSameLinkReadMoreURL @"https://tryappbox.github.io/features/keepsamelink/"
 
 #define abConnectedToInternet @"Connected to the Internet."
 #define abNotConnectedToInternet @"Waiting for the Internet Connection."

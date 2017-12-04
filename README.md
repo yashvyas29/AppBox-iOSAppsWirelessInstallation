@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/vineetchoudhary/AppBox-iOSAppsWirelessInstallation.svg?branch=master)](https://travis-ci.org/vineetchoudhary/AppBox-iOSAppsWirelessInstallation)
 [![GitHub Release](https://img.shields.io/github/release/vineetchoudhary/AppBox-iOSAppsWirelessInstallation.svg)](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/releases/latest)
+[![Github All Releases](https://img.shields.io/github/downloads/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/total.svg)](http://tryappbox.com/download)
 [![Downloads](https://img.shields.io/badge/download-appbox.app-brightgreen.svg)](http://tryappbox.com/download)
 [![Twitter](https://img.shields.io/twitter/follow/tryappbox.svg?style=social&label=Follow)](https://twitter.com/tryappbox)
 [![License](https://i.creativecommons.org/l/by-nd/4.0/80x15.png)](#user-content-license)
@@ -48,23 +49,30 @@ AppBox is a tool for developers to build and deploy Development and In-house app
 | Uploaded App Expiration |	Until you delete from your Dropbox |	3days |
 | Installations Per App |	Unlimited |	10 | 
 | Auto Restart Upload After Network Change or Failure | Yes | No | 
-| Dashboard |	Yes`*` |	Yes (login required) |
-`*` Will be available in future version 😜
+| Dashboard |	Yes |	Yes (login required) |
 
 
 
 # Current Version Screenshot 🎨
 ### Upload IPA
-![](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/blob/Screenshot/Screenshot/uploadipa.png?raw=true)
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/UploadIPA.png?raw=true)
 
 ### Archive and Upload IPA
-![](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/blob/Screenshot/Screenshot/archiveandipa.png?raw=trye)
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/ArchiveAndUpload.png?raw=true)
 
-### Uploading IPA
-![](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/blob/Screenshot/Screenshot/uploadingipa.png?raw=true)
+### Share URL
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/AppURL.png?raw=true)
+
+### Dashboard
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/Dashboard.png?raw=true)
+
+### Preferences
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/General.png?raw=true)
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/Email.png?raw=true)
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/Slack.png?raw=true)
 
 ### Installation and All Builds WebPage
-![](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/raw/Screenshot/Screenshot/webpage1.png?raw=true)        ![](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/raw/Screenshot/Screenshot/webpage2.png?raw=true)
+![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/webpage1.png?raw=true)        ![](https://github.com/tryappbox/tryappbox.github.io/blob/master/Images/webpage2.png?raw=true)
 
 # Contributions ❤️
 Any contribution is more than welcome! You can contribute through pull requests and [issues](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation/issues) on [GitHub](https://github.com/vineetchoudhary/AppBox-iOSAppsWirelessInstallation)
